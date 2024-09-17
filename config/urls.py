@@ -9,6 +9,6 @@ load_dotenv()
 ADMIN_URL = os.getenv("ADMIN_URL")
 
 urlpatterns = [
-    path(F'{ADMIN_URL}', admin.site.urls),
-    path('api/', include('api.urls')),
+    path(f'{ADMIN_URL}/', admin.site.urls),
+    path('', include('api.urls')),
 ]
